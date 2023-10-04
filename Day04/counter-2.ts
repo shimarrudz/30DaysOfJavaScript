@@ -4,14 +4,12 @@ type ReturnObj = {
     reset: () => number,
 }
 
-function createCounterTs(init: number): ReturnObj {
+function createCounterTS(init: number): ReturnObj {
     const resetValue = init;
     let currentValue = init;
-
     return {
-        increment: (): number => ++ currentValue,
-        decrement: (): number => -- currentValue,
+        increment: (): number => ++currentValue,
+        decrement: (): number => --currentValue,
         reset: (): number => currentValue = resetValue,
-
     }
-}
+};
